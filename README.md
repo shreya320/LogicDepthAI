@@ -14,8 +14,8 @@ To run this project, you need:
 
 ## Setting Up the Environment
 
-1. **Create a virtual environment:**
-2. **Install dependencies:**
+1. **Create a virtual environment**
+2. **Install dependencies**
 
 ## Running the Code
 
@@ -36,10 +36,10 @@ The script outputs predicted **logic depth** for given RTL signals.
 
 ## Project Structure
 ```
-├── final_random_forest_model.pkl  # Trained model
-├── rtl.py                     # Script to load model & predict
-├── rtl_dataset.csv                    # Training dataset (if available)
-├── README.md                      # This file
+├── final_random_forest_model.pkl     # Trained model
+├── rtl.py                            # Script to load model & predict
+├── rtl_dataset.csv                   # Training dataset (if available)
+├── README.md                         # This file
 ```
 
 ## Future Improvements
