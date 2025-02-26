@@ -33,7 +33,10 @@ To run this project, you need:
 ## Setting Up the Environment
 
 1. **Create a virtual environment**
+   Create a virtual environment to isolate dependencies.
+   
 2. **Install dependencies**
+   Use pip to install required Python packages.
 
 ## Running the Code
 
@@ -59,8 +62,25 @@ The script outputs predicted **logic depth** for given RTL signals.
 ├── rtl_dataset.csv                   # Training dataset (if available)
 ├── README.md                         # This file
 ```
+## Dataset Information
 
-## Future Improvements
+The dataset consists of synthesized RTL signals with extracted features.
+Features include gate types, signal paths, and structural characteristics.
+Labels correspond to the actual logic depth measured after synthesis.
+
+## Model Details
+
+The project uses a Random Forest model for prediction.
+Random Forest was chosen due to its high accuracy on structured data.
+The model is trained on engineered features extracted from RTL designs.
+
+## Evaluation Metrics
+
+Accuracy: Measures how often predictions match actual values.
+Mean Absolute Error (MAE): Average error magnitude in depth estimation.
+R² Score: Evaluates how well predictions align with actual values.
+
+Future Improvements
 - Support for **multiple machine learning models**.
 - Better **data preprocessing** to improve accuracy.
 - Integration with a **web-based interface** for easy predictions.
