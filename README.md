@@ -1,7 +1,9 @@
 # LogicDepthAI
 
+
 ## Overview
 This project predicts the **combinational logic depth** of a signal in an **RTL module** without running full synthesis. It uses a **Random Forest model** trained on RTL signal data extracted from synthesis reports.
+
 
 ## How It Works
 
@@ -15,13 +17,16 @@ The solution follows these key steps:
 
 - Prediction & Deployment: New RTL signals can be fed into the trained model to predict combinational logic depth.
 
+
 ## Inputs & Outputs
 
-Input: RTL signal data with extracted features (Fan-In, Fan-Out, gate count, etc.).
+- Input: RTL signal data with extracted features (Fan-In, Fan-Out, gate count, etc.).
+  
+- Output: Predicted combinational logic depth of the given RTL signal.
 
-Output: Predicted combinational logic depth of the given RTL signal.
 
 ## Prerequisites
+
 To run this project, you need:
 - Python 3.x
 - Required libraries:
@@ -30,13 +35,15 @@ To run this project, you need:
   - `numpy`
   - `pickle`
 
+
 ## Setting Up the Environment
 
 1. **Create a virtual environment**
    Create a virtual environment to isolate dependencies.
    
-2. **Install dependencies**
+3. **Install dependencies**
    Use pip to install required Python packages.
+
 
 ## Running the Code
 
@@ -55,6 +62,8 @@ Modify `rtl.py` to add new RTL signal data before running.
 ### **Step 4: View Predictions**
 The script outputs predicted **logic depth** for given RTL signals.
 
+
+
 ## Project Structure
 ```
 ├── final_random_forest_model.pkl     # Trained model
@@ -62,25 +71,37 @@ The script outputs predicted **logic depth** for given RTL signals.
 ├── rtl_dataset.csv                   # Training dataset (if available)
 ├── README.md                         # This file
 ```
+
+
 ## Dataset Information
 
 The dataset consists of synthesized RTL signals with extracted features.
+
 Features include gate types, signal paths, and structural characteristics.
+
 Labels correspond to the actual logic depth measured after synthesis.
+
 
 ## Model Details
 
 The project uses a Random Forest model for prediction.
+
 Random Forest was chosen due to its high accuracy on structured data.
+
 The model is trained on engineered features extracted from RTL designs.
+
 
 ## Evaluation Metrics
 
 Accuracy: Measures how often predictions match actual values.
+
 Mean Absolute Error (MAE): Average error magnitude in depth estimation.
+
 R² Score: Evaluates how well predictions align with actual values.
 
-Future Improvements
+
+### Future Improvements
+
 - Support for **multiple machine learning models**.
 - Better **data preprocessing** to improve accuracy.
 - Integration with a **web-based interface** for easy predictions.
