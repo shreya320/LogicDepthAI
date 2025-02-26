@@ -3,7 +3,7 @@
 ## Overview
 This project predicts the **combinational logic depth** of a signal in an **RTL module** without running full synthesis. It uses a **Random Forest model** trained on RTL signal data extracted from synthesis reports.
 
-##How It Works
+## How It Works
 
 The solution follows these key steps:
 
@@ -15,7 +15,7 @@ The solution follows these key steps:
 
 - Prediction & Deployment: New RTL signals can be fed into the trained model to predict combinational logic depth.
 
-##Inputs & Outputs
+## Inputs & Outputs
 
 Input: RTL signal data with extracted features (Fan-In, Fan-Out, gate count, etc.).
 
